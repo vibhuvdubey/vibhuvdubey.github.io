@@ -1,171 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Shreeda Classes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreeda Classes</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #4facfe, #f093fb);
-      color: #333;
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #333;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 800;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* CARD */
+.container {
+    max-width: 1100px;
+    margin: -50px auto 30px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00c6ff;
+}
+
+.profile h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* BOX */
+.box {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* WHY */
+.why {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.why ul {
+    padding-left: 20px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* CTA */
+.cta {
+    background: #ff4b2b;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 2.2rem;
     }
+}
+</style>
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-
-    .header {
-      background: linear-gradient(90deg, #ff512f, #dd2476);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 42px;
-      letter-spacing: 2px;
-    }
-
-    .header h2 {
-      margin: 10px 0 0;
-      font-weight: normal;
-    }
-
-    .section {
-      padding: 25px;
-    }
-
-    .highlight {
-      background: #f8f9fa;
-      border-left: 6px solid #ff512f;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .card {
-      flex: 1;
-      min-width: 250px;
-      background: #fff7f0;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin: 8px 0;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 20px;
-      background: linear-gradient(90deg, #00c853, #64dd17);
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .footer {
-      background: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    .contact p {
-      margin: 8px 0;
-      font-weight: 500;
-    }
-
-  </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <div class="header">
+<div class="hero">
     <h1>Shreeda Classes</h1>
     <h2>At Home Tuition</h2>
-    <p>Quality Learning for Bright Future ✨</p>
-  </div>
+    <p>Quality Learning for Bright Future</p>
+</div>
 
-  <div class="section">
-    <div class="highlight">
-      <strong>Boards:</strong> CBSE & State Boards <br>
-      <strong>Classes:</strong> 1 to 8
+<div class="container">
+
+    <!-- PROFILE -->
+    <div class="profile">
+        <img src="teacher.jpg" alt="Teacher">
+        <div>
+            <h3>Teacher Name</h3>
+            <div class="info">
+                <p><strong>Qualification:</strong> M.Sc, B.Ed</p>
+                <p><strong>Experience:</strong> 10+ Years</p>
+            </div>
+        </div>
     </div>
 
+    <!-- GRID -->
     <div class="grid">
 
-      <div class="card">
-        <h3>👩‍🏫 Teacher</h3>
-        <p><b>Name:</b> [Your Name]</p>
-        <p><b>Qualification:</b> [MSc / BEd]</p>
-        <p><b>Experience:</b> [X+ Years]</p>
-      </div>
+        <div class="box">
+            <h3>Classes</h3>
+            <p>1 to 8</p>
+            <p>CBSE & State Board</p>
+        </div>
 
-      <div class="card">
-        <h3>📚 Subjects</h3>
-        <ul>
-          <li>Mathematics</li>
-          <li>Science</li>
-          <li>Other Subjects</li>
-        </ul>
-      </div>
+        <div class="box">
+            <h3>Subjects</h3>
+            <p>Mathematics</p>
+            <p>Science</p>
+            <p>All Subjects</p>
+        </div>
 
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>✅ Why Choose Us?</h3>
-        <ul>
-          <li>Simple & Easy Teaching</li>
-          <li>Personal Attention</li>
-          <li>Strong Concept Building</li>
-          <li>Regular Tests</li>
-        </ul>
-      </div>
-
-      <div class="card contact">
-        <h3>📞 Contact</h3>
-        <p>Phone: [Your Number]</p>
-        <p>Email: [Your Email]</p>
-        <p>Address: [Your Address]</p>
-      </div>
+        <div class="box why">
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Simple Teaching Method</li>
+                <li>Personal Attention</li>
+                <li>Strong Concept Building</li>
+                <li>Regular Tests</li>
+            </ul>
+        </div>
 
     </div>
 
-  </div>
+    <!-- CONTACT -->
+    <div class="contact">
+        <p>📞 8960568147</p>
+        <p>📧 samtutors2009@gmail.com</p>
+        <p>📍 Your Address Here</p>
 
-  <div class="cta">
-    🚀 Limited Seats — Enroll Now!
-  </div>
-
-  <div class="footer">
-    © 2026 Shreeda Classes | All Rights Reserved
-  </div>
+        <div class="cta">
+            Limited Seats – Enroll Now!
+        </div>
+    </div>
 
 </div>
 
