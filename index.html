@@ -82,6 +82,19 @@
     display: block;
     animation: dropIn .7s cubic-bezier(.23,1.3,.56,1) both;
   }
+  .teacher-logo {
+  position: absolute;
+  bottom: -6px;
+  left: -6px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: white;
+  padding: 4px;
+  object-fit: contain;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  z-index: 2;
+}
   .logo-sub {
     font-family: 'Baloo 2', cursive;
     font-weight: 800;
@@ -431,10 +444,15 @@
 
     <!-- TEACHER -->
     <div class="teacher-section">
-      <div class="teacher-photo-wrap">
-        <img class="teacher-photo" src="BasicClassLOGO.png" alt="Vibhoo Mishra">
-        <div class="teacher-star-badge">⭐</div>
-      </div>
+<div class="teacher-photo-wrap">
+  <!-- Teacher Photo -->
+  <img class="teacher-photo" src="teacher.jpg" alt="Vibhoo Mishra">
+
+  <!-- Small Logo Badge -->
+  <img class="teacher-logo" src="BasicClassLOGO.png" alt="Class Logo">
+
+  <div class="teacher-star-badge">⭐</div>
+</div>
       <div class="teacher-info">
         <h2>Your Teacher:<br><span>Vibhoo Mishra</span></h2>
         <div class="teacher-meta">
